@@ -8,6 +8,7 @@
 
 $light-color: #fff;
 $accent-color: #65e496;
+$violet-color: #696980;
 
 body {
 	font-family: 'Roboto Slab', serif;
@@ -22,7 +23,7 @@ body {
 	background: url("../img/main-bg.jpg") no-repeat center;
 	background-size: cover;
 	color: $light-color;
-	padding-bottom: 174px;
+	padding-bottom: 158px;
 }
 
 .header {
@@ -31,8 +32,8 @@ body {
 	align-items: center;
 	max-width: 1170px;
 	margin: 0 auto;
-	padding-top: 50px;
-	padding-bottom: 165px;
+	padding-top: 54px;
+	padding-bottom: 161px;
 
 	&__logo {
 		display: block;
@@ -71,11 +72,20 @@ body {
 }
 
 .block-text {
-	flex-basis: calc(100% - 500px);
+	flex-basis: calc(100% - 497px);
 
 	&__name {
 		font-family: 'Open Sans', sans-serif;
 		font-size: 18px;
+		margin-bottom: 30px;
+	}
+
+	&__name-top {
+		margin-top: 17px;
+		margin-left: 0;
+		font-size: 18px;
+		color: $violet-color;
+		letter-spacing: 0.4px;
 	}
 
 	&__title {
@@ -101,9 +111,10 @@ body {
 	.block-text__description {
 		font-family: 'Open Sans', sans-serif;
 		font-size: 15px;
-		line-height: 2.4;
+		line-height: 1.7;
 		letter-spacing: .7px;
-		margin-bottom: 24px;
+		margin-bottom: 21px;
+		padding-right: 82px;
 	}
 
 	&__btn {
@@ -115,7 +126,7 @@ body {
 		border-radius: 3px;
 		text-align: center;
 		font-size: 18px;
-		margin-top: 48px;
+		margin-top: 44px;
 		padding: 14px 0;
 		letter-spacing: .7px;
 		margin-bottom: 19px;
@@ -133,6 +144,28 @@ body {
 		height: 643px;
 		flex-basis: 447px;
 		overflow: hidden;
+		margin-top: 16px;
 	}
+}
 
+.page {
+	padding-top: 161px;
+}
+
+.block-author {
+	display: flex;
+	justify-content: space-between;
+}
+
+.block-ava {
+	position: relative;
+	&__svg {
+		position: absolute;
+		z-index: -1;
+		right: 0;
+	}
+	&__img {
+		margin-top: 47px;
+		margin-right: 44px;
+	}
 }
