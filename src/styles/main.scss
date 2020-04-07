@@ -169,3 +169,25 @@ body {
 		margin-right: 44px;
 	}
 }
+
+.block-counter {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 164px;
+	padding-bottom: 144px;
+
+	p {
+		font-family: "Open Sans", serif;
+		text-align: center;
+		font-size: 18px;
+		color: $violet-color;
+		span {
+			font-family: "Roboto Slab", serif;
+			display: block;
+			font-size: 80px;
+			font-weight: 100;
+			color: $accent-color;
+			margin-bottom: 12px;
+		}
+	}
+}
