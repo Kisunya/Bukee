@@ -87,7 +87,8 @@ h3 {
 	&__name {
 		font-family: 'Open Sans', sans-serif;
 		font-size: 18px;
-		margin-bottom: 30px;
+		margin-bottom: 29px;
+		letter-spacing: 1.1px;
 	}
 
 	&__name_top {
@@ -155,6 +156,37 @@ h3 {
 		flex-basis: 447px;
 		overflow: hidden;
 		margin-top: 16px;
+		position: relative;
+
+		&__title {
+			font-size: 36px;
+			letter-spacing: 1.4px;
+			text-transform: uppercase;
+			color: $light-color;
+			text-align: center;
+			position: absolute;
+			left: 128px;
+			top: 109px;
+			span {
+				font-size: 14px;
+				letter-spacing: 0.3px;
+				color: $accent-color;
+				font-family: 'Open Sans', sans-serif;
+				display: block;
+				text-transform: none;
+				margin-top: 5px;
+			}
+		}
+
+		&__autor {
+			font-size: 14px;
+			letter-spacing: 0.7px;
+			color: $accent-color;
+			font-family: 'Open Sans', sans-serif;
+			position: absolute;
+			bottom: 52px;
+			left: 87px;
+		}
 	}
 }
 
@@ -232,11 +264,12 @@ h3 {
 		letter-spacing: 1.2px;
 	}
 
-	p {
+	&__text {
 		font-family: "Open Sans", sans-serif;
 		letter-spacing: 0.6px;
 		line-height: 1.6;
 		padding-right: 102px;
+		margin-bottom: 19px;
 	}
 
 	&-text {
@@ -290,6 +323,7 @@ h3 {
 .block-about-social {
 	display: flex;
 	align-items: center;
+	
 	&__title {
 		font-size: 18px;
 		font-weight: 700;
@@ -297,6 +331,7 @@ h3 {
 		font-family: "Roboto Slab", sans-serif;
 		margin-top: 13px;
 		padding-right: 21px;
+		letter-spacing: 1.1px;
 	}
 
 	&__list {
@@ -313,5 +348,77 @@ h3 {
 			}
 		}
 	}
+}
 
+.page-other {
+	padding-top: 147px;
+
+	.block-text__btn {
+		margin: 0 auto;
+		max-width: 220px;
+	}
+}
+
+.block-other {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 87px;
+	margin-bottom: 87px;
+
+	.block-book-demo {
+		background-image: url("../img/book-small.svg");
+		width: 268px;
+		height: 408px;
+		flex-basis: 270px;
+		border-radius: 3px;
+		margin: 0 auto 35px;
+
+		&__title {
+			font-size: 24px;
+			left: 66px;
+			top: 70px;
+			letter-spacing: 0.9px;
+
+			span {
+				font-size: 12px;
+				margin-top: 10px;
+			}
+		}
+
+		&__autor {
+			font-size: 12px;
+			bottom: 20px;
+			left: 77px;
+		}
+	}
+
+	&__item {
+		align-items: center;
+		text-align: center;
+	}
+
+	&__title {
+		font-size: 24px;
+		letter-spacing: 1.1px;
+		margin-bottom: 15px;
+	}
+
+	&__text {
+		font-size: 15px;
+		max-width: 340px;
+		color: $violet-color;
+		font-family: "Open Sans", sans-serif;
+		letter-spacing: 0.8px;
+		line-height: 1.6;
+		margin-bottom: 21px;
+	}
+
+	&__btn {
+		font-size: 15px;
+		color: $accent-color;
+		text-transform: uppercase;
+		font-weight: 700;
+		text-decoration: none;
+		letter-spacing: 0.8px;
+	}
 }
