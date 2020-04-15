@@ -9,9 +9,19 @@
 $light-color: #fff;
 $accent-color: #65e496;
 $violet-color: #696980;
+$bg-light-color: #f5f6fa;
+$bg-dark-color: #44444f;
 
 body {
 	font-family: 'Roboto Slab', serif;
+	font-size: 15px;
+}
+
+h1, h2, h3, h4, p {
+}
+
+h3 {
+	font-size: 24px;
 }
 
 .wrap {
@@ -80,7 +90,7 @@ body {
 		margin-bottom: 30px;
 	}
 
-	&__name-top {
+	&__name_top {
 		margin-top: 17px;
 		margin-left: 0;
 		font-size: 18px;
@@ -150,6 +160,26 @@ body {
 
 .page {
 	padding-top: 161px;
+
+	&_gray {
+		background-color: $bg-light-color;
+		padding-top: 145px;
+		padding-bottom: 255px;
+	}
+
+	&__title {
+		font-size: 48px;
+		text-align: center;
+		margin-bottom: -7px;
+		letter-spacing: 2px;
+	}
+
+	&__subtitle {
+		color: $accent-color;
+		text-align: center;
+		font-size: 18px;
+		letter-spacing: 0.9px;
+	}
 }
 
 .block-author {
@@ -190,4 +220,98 @@ body {
 			margin-bottom: 12px;
 		}
 	}
+}
+
+.block-about {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 84px;
+
+	h3 {
+		margin-bottom: 18px;
+		letter-spacing: 1.2px;
+	}
+
+	p {
+		font-family: "Open Sans", sans-serif;
+		letter-spacing: 0.6px;
+		line-height: 1.6;
+		padding-right: 102px;
+	}
+
+	&-text {
+		flex-basis: 49%;
+	}
+
+	&-table {
+		flex-basis: 49%;
+
+		&__list {
+			padding: 0;
+			counter-reset: list;
+			column-count: 2;
+			margin-top: 25px;
+			margin-bottom: 26px;
+
+			&>li {
+				position: relative;
+				padding-left: 36px;
+				counter-increment: list;
+				list-style-type: none;
+				letter-spacing: .7px;
+				margin-bottom: 15px;
+
+				&::before {
+					content: counter(list) ". ";
+				}
+
+				&::after {
+					content: "+";
+					position: absolute;
+					left: 0;
+					background-color: #5fc9b4;
+					color: $light-color;
+					font-family: "Open Sans", sans-serif;
+					font-size: 15px;
+					line-height: 22px;
+					top: 1px;
+					padding: 0 7px;
+				}
+			}
+		}
+
+		.block-text__btn{
+			max-width: 135px;
+			margin: 0;
+		}
+	}
+}
+
+.block-about-social {
+	display: flex;
+	align-items: center;
+	&__title {
+		font-size: 18px;
+		font-weight: 700;
+		color: $violet-color;
+		font-family: "Roboto Slab", sans-serif;
+		margin-top: 13px;
+		padding-right: 21px;
+	}
+
+	&__list {
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+		&>li {
+			display: inline-block;
+			font-size: 18px;
+			vertical-align: middle;
+			margin-right: 15px;
+			&>a {
+				color: $accent-color;
+			}
+		}
+	}
+
 }
